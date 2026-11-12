@@ -9,3 +9,4 @@ data/*.db
 data/*.db-*
 node_modules/
 dist/
+SUBMISSION.md

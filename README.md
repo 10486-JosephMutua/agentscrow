@@ -8,7 +8,7 @@
 
 Built for the *Build What's Next with PayPal and AI* hackathon. PayPal (Orders v2 authorize/capture/void/reauthorize, Payouts, webhooks) is the
 core of the product, and AI is used three ways: a Groq-hosted **buyer agent**, a **worker agent**, and an **LLM judge panel**, all talking to
-PayPal and to each other through **MCP**. [`SUBMISSION.md`](SUBMISSION.md) has the write-up, the tools list and a requirements checklist.
+PayPal and to each other through **MCP**.
 
 ## For judges: run it in 5 minutes (no keys, no PayPal account, no Docker)
 
@@ -256,7 +256,7 @@ scripts/  tests/ (fakes/: PayPal, Groq, docker)  Dockerfile  docker-compose.yml 
 
 ## License
 
-MIT (see `LICENSE`).
+MIT (see [`LICENSE`]).
 
 ## Website jobs: checked against the buyer's preferences
 
