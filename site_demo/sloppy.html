@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lens &amp; Light Studio</title>
+<style>
+:root{--accent:#ea580c;--accent2:#a83f08;--bg:#0b1220;--fg:#e5e7eb;--card:#111a2e;--line:#1f2a44;--muted:#9ca3af;--on-accent:#ffffff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--fg);line-height:1.6}
+header.top{position:sticky;top:0;z-index:5;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;padding:14px 5vw;background:var(--bg);border-bottom:1px solid var(--line)}
+.brand{font-weight:800;letter-spacing:.2px;font-size:1.15rem}
+nav{display:flex;flex-wrap:wrap;gap:6px 18px}
+nav a{color:var(--fg);text-decoration:none;font-weight:600;font-size:.95rem}
+nav a:hover{text-decoration:underline}
+main{max-width:1080px;margin:0 auto;padding:0 5vw}
+.intro{margin:0 -5vw;padding:84px 5vw;background:linear-gradient(135deg,var(--accent),var(--accent2));color:var(--on-accent);text-align:center}
+.intro h1{margin:0 0 12px;font-size:clamp(2rem,6vw,3.4rem);line-height:1.1}
+.intro p{margin:0 auto 22px;max-width:620px;font-size:1.1rem}
+.btn,button{display:inline-block;border:0;border-radius:999px;padding:12px 26px;font:inherit;font-weight:700;cursor:pointer;background:var(--on-accent);color:var(--accent2);text-decoration:none}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+section h2{margin:0 0 14px;font-size:1.7rem;border-left:6px solid var(--accent);padding-left:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.card img{width:100%;height:auto;border-radius:10px;display:block;margin-bottom:10px}
+.card h3{margin:0 0 6px;color:var(--accent)}
+.price{font-size:1.8rem;font-weight:800;color:var(--accent)}
+.note{display:inline-block;margin:4px 8px 4px 0;padding:6px 14px;border-radius:999px;background:var(--card);border:1px solid var(--line)}
+form{display:grid;gap:14px;max-width:520px;margin-top:16px}
+label{font-weight:600;display:block;margin-bottom:4px}
+input,textarea{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--fg);font:inherit}
+form button{background:var(--accent);color:var(--on-accent);justify-self:start}
+footer{padding:28px 5vw;text-align:center;color:var(--muted);font-size:.9rem}
+@media (max-width:640px){header.top{flex-direction:column;align-items:flex-start}.intro{padding:56px 5vw}}
+</style>
+</head>
+<body>
+<header class="top"><span class="brand">Lens &amp; Light Studio</span><nav aria-label="Main"><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a></nav></header>
+<main>
+<div class="intro" id="hero"><h1>Lens &amp; Light Studio</h1><p>Portfolio website for a wedding and portrait photographer</p><span class="note">Book a free consultation</span><p><a class="btn" href="#about">Explore</a></p></div>
+<section id="about"><h2>About</h2><p>Lens &amp; Light Studio exists to help you with this: Portfolio website for a wedding and portrait photographer. We keep things simple, honest and well made.</p></section>
+<section id="gallery"><h2>Gallery</h2><div class="grid"><div class="card"><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='480' height='320' viewBox='0 0 480 320'><rect width='480' height='320' fill='%23ea580c'/><circle cx='360' cy='90' r='46' fill='%23ffffff' fill-opacity='.35'/><path d='M0 320 L150 150 L260 250 L340 180 L480 320 Z' fill='%23000000' fill-opacity='.25'/></svg>" loading="lazy"><h3>Project 1</h3></div><div class="card"><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='480' height='320' viewBox='0 0 480 320'><rect width='480' height='320' fill='%23ea580c'/><circle cx='360' cy='90' r='46' fill='%23ffffff' fill-opacity='.35'/><path d='M0 320 L150 150 L260 250 L340 180 L480 320 Z' fill='%23000000' fill-opacity='.25'/></svg>" loading="lazy"><h3>Project 2</h3></div><div class="card"><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='480' height='320' viewBox='0 0 480 320'><rect width='480' height='320' fill='%23ea580c'/><circle cx='360' cy='90' r='46' fill='%23ffffff' fill-opacity='.35'/><path d='M0 320 L150 150 L260 250 L340 180 L480 320 Z' fill='%23000000' fill-opacity='.25'/></svg>" loading="lazy"><h3>Project 3</h3></div></div></section>
+<section id="pricing"><h2>Pricing</h2><div class="grid"><div class="card"><h3>Starter</h3><p class="price">$29</p><p>Everything you need to get started.</p></div><div class="card"><h3>Standard</h3><p class="price">$59</p><p>Everything you need to get started.</p></div><div class="card"><h3>Premium</h3><p class="price">$99</p><p>Everything you need to get started.</p></div></div></section>
+<section id="contact"><h2>Contact</h2><p>Write to us at hello@example.com and we will get back to you.</p></section>
+</main>
+<footer>&copy; Lens &amp; Light Studio. All rights reserved.</footer>
+</body>
+</html>

@@ -1,0 +1,13 @@
+# Versions below were installed and exercised together (Python 3.12) when this project was built.
+# `langchain[mcp]` provides langchain.mcp.MCPAdapter (beta) and pulls in FastMCP.
+langchain[mcp]==1.4.3
+langchain-groq==1.1.3
+groq==0.37.1
+flask==3.1.3
+flask-cors==6.0.5
+jsonschema==4.26.0
+pydantic==2.13.5
+requests==2.34.2
+python-dotenv==1.2.4
+waitress==3.0.2
+cryptography==50.0.2

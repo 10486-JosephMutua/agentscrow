@@ -1,0 +1,33 @@
+# docker compose --profile build-only build     # build the sandbox image once
+# docker compose up --build                     # build and start the app on http://localhost:5000
+#
+# SECURITY: the app container talks to the host's Docker daemon through the mounted socket so it can start
+# throw-away sandbox containers. Access to the Docker socket is root-equivalent on the host. For anything
+# beyond a local demo, run the API directly on the host instead, or point DOCKER_HOST at a rootless daemon
+# or a socket proxy that only allows `docker run`/`kill`/`info`.
+services:
+  app:
+    build: .
+    image: agentescrow
+    env_file: .env
+    environment:
+      PUBLIC_BASE_URL: ${PUBLIC_BASE_URL:-http://localhost:5000}
+      FRONTEND_URL: ${PUBLIC_BASE_URL:-http://localhost:5000}
+      SANDBOX_BACKEND: docker
+      ALLOW_UNSAFE_SANDBOX: "false"
+    ports:
+      - "5000:5000"
+    volumes:
+      - agentescrow-data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
+
+  sandbox-image:
+    build:
+      context: .
+      dockerfile: docker/sandbox.Dockerfile
+    image: agentescrow-sandbox
+    profiles: ["build-only"]
+
+volumes:
+  agentescrow-data:
